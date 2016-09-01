@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  #after_action :verify_authorized
   ## I shouldn't have to add authorize to every method yea?
 
   def index

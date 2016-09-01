@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_one :fcc_profile
   enum role: [:guest, :user, :admin, :master]
   after_initialize :set_default_role, :if => :new_record?
 
@@ -10,4 +11,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def fcc_username
+    fcc_profile.username if fcc_profile
+  end
 end
