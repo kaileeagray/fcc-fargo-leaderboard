@@ -1,0 +1,19 @@
+
+<h1>Countdown to Deploy and Tech Tailgate</h1>
+<div class="container">
+  <div class="clock"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+
+  <script type="text/javascript">
+    var date  = new Date(Date.UTC(2016, 9, 8, 17, 0, 0));
+    var now   = new Date();
+    var diff  = date.getUTCTime()/1000 - now.getUTCTime()/1000;
+
+    var clock = $('.clock').FlipClock(diff, {
+      clockFace: 'DailyCounter',
+      countdown: true,
+    });
+  </script>
+</div>
