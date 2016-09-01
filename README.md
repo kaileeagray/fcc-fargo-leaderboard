@@ -1,1 +1,1 @@
-# Learn.co Rails App Assessment -- K. Gray -- Free Code Camp Fargo Leaderboard
+# Learn.co Rails App Assessment  - Free Code Camp Fargo, ND Leaderboard
