@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "pundit"
 gem 'devise'
 gem 'autoprefixer-rails'
 gem 'rails',                   '5.0.0.1'
