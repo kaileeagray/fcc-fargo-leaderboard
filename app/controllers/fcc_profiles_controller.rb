@@ -1,2 +1,0 @@
-class FccProfilesController < ApplicationController
-end

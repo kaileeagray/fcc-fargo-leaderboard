@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_one :fcc_profile
+  has_one :camper_profile
   enum role: [:guest, :user, :admin, :master]
   after_initialize :set_default_role, :if => :new_record?
 
@@ -13,6 +13,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   def fcc_username
-    fcc_profile.username if fcc_profile
+    camper_profile.username if camper_profile
   end
 end
