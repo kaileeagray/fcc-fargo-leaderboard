@@ -1,11 +1,11 @@
-        <div class="header">Tech Tailgate Time</div>
+<div class="header">Tech Tailgate Time</div>
 
-  <div class="clock"></div>
-  <script type="text/javascript">
-    var diff = <%=(Time.new(2016, 9, 8, 17) - Time.now())%>;
-    var clock = $('.clock').FlipClock(diff, {
-      clockFace: 'DailyCounter',
-      countdown: true,
-      autoStart: true,
-    });
-  </script>
+<div class="clock"></div>
+<script type="text/javascript">
+  var diff = <%=(Time.new(2016, 9, 8, 17) - Time.now())%>;
+  var clock = $('.clock').FlipClock(diff, {
+    clockFace: 'DailyCounter',
+    countdown: true,
+    autoStart: true,
+  });
+</script>
