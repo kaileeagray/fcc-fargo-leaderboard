@@ -4,27 +4,30 @@
     <p>Associated User: <%= link_to camper_profile.user.email, user_path(camper_profile.user) %></p>
   <%end%>
 </td>
+<td>
+  <h4>Overall points: <%=camper_profile.points%></h4>
+</td>
 <%if current_user.admin?%>
-<td>
-  <%= form_for camper_profile, controller: 'attractions', action: 'update' do |f| %>
-    <div class="form-group">
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-    </div>
-    <%unless camper_profile.user%>
+  <td>
+    <%= form_for camper_profile, controller: 'attractions', action: 'update' do |f| %>
       <div class="form-group">
-        <%= f.label :user, "Select Associated User Account" %>
-        <%= f.collection_select :user_id, User.no_camper_profile, :id, :email, :include_blank => true %>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
       </div>
-    <%end%>
+      <%unless camper_profile.user%>
+        <div class="form-group">
+          <%= f.label :user, "Select Associated User Account" %>
+          <%= f.collection_select :user_id, User.no_camper_profile, :id, :email, :include_blank => true %>
+        </div>
+      <%end%>
 
-    <div class="actions form-group">
-      <%= f.submit "Update Camper Profile", :class => 'btn btn-primary' %>
-    </div>
+      <div class="actions form-group">
+        <%= f.submit "Update Camper Profile", :class => 'btn btn-primary' %>
+      </div>
 
-  <% end %>
-</td>
-<td>
-  <%= link_to("Delete camper", camper_profile_path(camper_profile), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs') unless camper_profile.user == current_user %>
-</td>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to("Delete camper", camper_profile_path(camper_profile), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs') unless camper_profile.user == current_user %>
+  </td>
 <%end%>
