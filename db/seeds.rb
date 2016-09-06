@@ -10,4 +10,7 @@ puts 'CREATED ADMIN USER: ' << user.email
 
 user.camper_profile = CamperProfile.create(username: "kaileeagray")
 
-# User.create(email: "meek00211@yahoo.com", name: "Steve", password: "stevesteve", bio: "luv of life")
+user = User.create(email: "meek00211@yahoo.com", name: "Steve", password: "stevesteve", bio: "luv of life")
+user.camper_profile = CamperProfile.create(username: "meek00211", points: 1000)
+
+user = User.create(email: "no_fcc@example.com", name: "No Account", password: "nofcc123", bio: "needs to sign up!")

@@ -12,8 +12,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def self.no_fcc_username
-
+  def self.no_camper_profile
+    User.includes(:camper_profile).where(camper_profiles: {id: nil})
   end
 
   def fcc_username
