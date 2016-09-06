@@ -3,7 +3,7 @@ class CreateFccProfiles < ActiveRecord::Migration[5.0]
     create_table :fcc_profiles do |t|
       t.string :username
       t.integer :points
-      t.references :user, index: true
+      t.belongs_to :user, index: true, unique: true, foreign_key: true
       t.timestamps null: false
     end
   end

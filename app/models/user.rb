@@ -12,6 +12,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def self.no_fcc_username
+
+  end
+
   def fcc_username
     camper_profile.username if camper_profile
   end

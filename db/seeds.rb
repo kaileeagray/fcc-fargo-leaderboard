@@ -7,3 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
+
+user.camper_profile = CamperProfile.create(username: "kaileeagray")
+
+# User.create(email: "meek00211@yahoo.com", name: "Steve", password: "stevesteve", bio: "luv of life")
