@@ -1,25 +1,18 @@
-<h1>New Free Code Camp Camper Profile</h1>
-
-  <%= form_for @camper_profile, controller: 'attractions', action: 'create' do |f| %>
-
-  <div class="field">
+<h1>New Free Code Camp Profile</h1>
+<%= form_for @camper_profile, controller: 'attractions', action: 'create' do |f| %>
+  <div class="form-group">
     <%= f.label :username %>
     <%= f.text_field :username %>
   </div>
 
-  <div class="field">
-    <!--  I will remove this field and scrape this info...-->
-    <%= f.label :points, "Total Points" %>
-    <%= f.number_field :points %>
-  </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :user, "Select Associated User Account" %>
     <%= f.collection_select :user_id, User.no_camper_profile, :id, :email, :include_blank => true %>
   </div>
 
-
-
-  <%= f.submit "Create Camper Profile" %>
+  <div class="actions form-group">
+    <%= f.submit "Create Camper Profile", :class => 'btn btn-primary' %>
+  </div>
 
 <% end %>
