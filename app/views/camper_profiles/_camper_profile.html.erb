@@ -7,7 +7,7 @@
 <td>
   <h4>Overall points: <%=camper_profile.points%></h4>
 </td>
-<%if current_user.admin?%>
+<%if current_user.try(:admin?)%>
   <td>
     <%= form_for camper_profile, controller: 'attractions', action: 'update' do |f| %>
       <div class="form-group">
