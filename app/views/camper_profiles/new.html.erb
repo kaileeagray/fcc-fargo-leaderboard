@@ -8,9 +8,17 @@
   </div>
 
   <div class="field">
+    <!--  I will remove this field and scrape this info...-->
     <%= f.label :points, "Total Points" %>
     <%= f.number_field :points %>
   </div>
+
+  <div class="field">
+    <%= f.label :user, "Select Associated User Account" %>
+    <%= f.collection_select :user_id, User.no_camper_profile, :id, :email, :include_blank => true %>
+  </div>
+
+
 
   <%= f.submit "Create Camper Profile" %>
 

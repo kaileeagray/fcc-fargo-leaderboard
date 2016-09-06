@@ -14,3 +14,9 @@ user = User.create(email: "meek00211@yahoo.com", name: "Steve", password: "steve
 user.camper_profile = CamperProfile.create(username: "meek00211", points: 1000)
 
 user = User.create(email: "no_fcc@example.com", name: "No Account", password: "nofcc123", bio: "needs to sign up!")
+
+CamperProfile.create(username: "no_user", points: 10000)
+
+User.create(email: "no_fcc_2@example.com", name: "No Account 1", password: "nofcc123", bio: "needs to sign up for fcc!")
+
+CamperProfile.create(username: "no_user_2", points: 20000)
