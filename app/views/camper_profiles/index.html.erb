@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h3>Free Code Camp -- Fargo, ND Area Campers</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @camper_profiles.each do |camper_profile| %>
+            <tr>
+              <%= render camper_profile %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
