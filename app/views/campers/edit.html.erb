@@ -1,0 +1,22 @@
+<%if camper.user%>
+  <p>Associated User: <%= link_to camper.user.email, user_path(camper.user) %></p>
+<%end%>
+</td>
+<td>
+  <%= form_for camper, controller: 'attractions', action: 'update' do |f| %>
+    <div class="form-group">
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </div>
+    <%unless camper.user%>
+      <div class="form-group">
+        <%= f.label :user, "Select Associated User Account" %>
+        <%= f.collection_select :user_id, User.no_camper, :id, :email, :include_blank => true %>
+      </div>
+    <%end%>
+
+    <div class="actions form-group">
+      <%= f.submit "Update Camper Profile", :class => 'btn btn-primary' %>
+    </div>
+
+  <% end %>

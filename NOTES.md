@@ -13,6 +13,7 @@
 
 ++ start the scraping process! ++
 
++ what's up with the master role?
 
 + improve/test user/camper creation, linkage
 
@@ -23,6 +24,9 @@
 
 ### once finished with user and camper create, edit, view, delete AND scraping ###
 + add user ability to follow camper_profiles -- user join table
++ user follow view pages
++ user view page
+
 
 ## much later
 + make even drier!
@@ -31,6 +35,8 @@
 
 ## much, much later
 + add git hub, bit bucket
+
++ improve seed data -- import actual usernames submitted
 
 
 ## Resources used:

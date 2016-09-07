@@ -2,6 +2,13 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   #after_action :verify_authorized
   ## I shouldn't have to add authorize to every method yea?
+  def new
+    @user = User.new
+    @user.camper = Camper.new
+  end
+
+  def create
+  end
 
   def index
     @users = User.all

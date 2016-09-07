@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <h3>Free Code Camp Fargo, ND -- Camper Leaderboard</h3>
+    <div class="column">
+      <table class="table">
+        <thead class="thead-inverse">
+      <tr>
+        <th>#</th>
+        <th>Username</th>
+        <th>Points</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+        <tbody>
+          <% @campers.each do |camper| %>
+            <tr>
+              <%= render camper %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

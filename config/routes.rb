@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  
-  resources :camper_profiles
+
+  resources :campers
 
   root 'welcome#hello'
 
