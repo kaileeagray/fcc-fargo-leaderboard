@@ -1,14 +1,23 @@
 <td>
+  <%=image_tag("no-face.png",  width: '50', alt: "No face camper with laptop")%>
+</td>
+<td>
   <%= link_to user.email, user %>
 </td>
-<%if current_user.admin?%>
 <td>
-  <%= form_for(user) do |f| %>
-    <%= f.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
-    <%= f.submit 'Change Role', :class => 'button-xs' %>
+  <%=user.role%>
+</td>
+<td>
+  <%= link_to edit_user_path(user), class: "button-xs btn-primary", remote: true do %>
+    <i class="glyphicon glyphicon-edit"></i>
   <% end %>
 </td>
 <td>
-  <%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs') unless user == current_user %>
+<div class="form">
+  <div class="form-group">
+      <%= link_to user_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: "button-xs btn-danger", remote: true do %>
+        <i class="glyphicon glyphicon-trash"></i>
+      <% end %>
+  </div>
+</div>
 </td>
-<%end%>

@@ -4,12 +4,15 @@
 + edit camper page
 + create camper_profile via camper_profile controller
 + sort leaderboard by points
-+ fix non-admin view of leaderboard -- only link to edit
++ DONE fix non-admin view of leaderboard -- only link to edit
   -- eventually: make multiple edits?
 + merge show, camper_profile.html.erb pages
-+ rename camper_profile to camper?
++ DONE -- rename camper_profile to camper?
 + collect git hub handles?
 + add pundit authorization for show, edit, delete, create
+
+
++ add carrierware to handle avatars -- use default no-face.png: https://github.com/carrierwaveuploader/carrierwave/wiki/How-to:-use-carrierwave-with-devise
 
 ++ start the scraping process! ++
 
