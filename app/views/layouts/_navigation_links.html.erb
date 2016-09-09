@@ -1,4 +1,4 @@
-<li><%= link_to 'Fargo Camper Leaderboard', campers_path%></li>
+<li><%= link_to 'Fargo Leaderboard', campers_path%></li>
 <%if user_signed_in?%>
   <li><%= link_to 'New Camper', new_camper_path%></li>
   <%if current_user.try(:admin?)%>
