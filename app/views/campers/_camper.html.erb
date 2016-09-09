@@ -9,14 +9,13 @@
 </td>
 
 <td>
-  <%=camper.points%>
+  <%=camper.points || "0"%>
 </td>
 
-<%if current_user.try(:admin?) || current_user == camper.user%>
+<%if current_user.try(:admin?)%>
   <td>
     <%= link_to("Edit", edit_camper_path(camper), :class => 'button-xs btn-primary') unless camper.user == current_user %>
   </td>
-
   <td>
     <%= link_to("Delete", camper_path(camper), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs btn-danger') unless camper.user == current_user %>
   </td>

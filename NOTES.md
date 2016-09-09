@@ -1,4 +1,7 @@
 ## To dos:
++ add edit/create camper profile to user edit page
++ can we make edit pages more dry by using partials to new?
+
 + in user controller -- camper profile needs to be created on sign_up
 + sign up page - field for fcc profile
 + edit camper page
@@ -52,3 +55,7 @@
 + http://www.theodinproject.com/ruby-on-rails/active-record-queries
 
 + http://guides.rubyonrails.org/active_record_querying.html
+
++ scraping example: http://railscasts.com/episodes/190-screen-scraping-with-nokogiri?view=asciicast
+
++

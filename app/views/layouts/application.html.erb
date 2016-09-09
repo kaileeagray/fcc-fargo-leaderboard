@@ -2,20 +2,20 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= content_for?(:title) ? yield(:title) : "Free Code Camp Fargo, ND Leaderboard" %></title>
-  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise Pundit" %>">
+  <title>Fargo Leaderboard | Free Code Camp</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim'%>
 </head>
 
   <body>
-    <header>
       <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+
+    <div class="container">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+      <%= render 'layouts/footer'%>
+    </div>
   </body>
 </html>
