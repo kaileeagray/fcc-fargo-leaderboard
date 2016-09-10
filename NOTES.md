@@ -1,3 +1,8 @@
+<!-- <%= f.select :type_name, [['Genomics','Genomics'],['Proteomics','Proteomics'],['Transcriptomics','Transcriptomics'],['Other','Other'] %>
+<%= f.text_field :type_name_other, "data-depends-on" => "#object_type_name", "data-depends-on-value" => "Other" %>
+where #object_type_name is the HTML id of your dropdown. -->
+
+
 ## To dos:
 + add edit/create camper profile to user edit page
 + can we make edit pages more dry by using partials to new?

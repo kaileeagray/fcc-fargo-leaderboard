@@ -9,11 +9,16 @@
     </div>
 
     <div class="form-group field">
-      <%= fields_for :camper, @user.camper do |camper_fields| %>
-        <%= f.label :username, "Free Code Camp Username" %><br />
-         <%= camper_fields.text_field :username %>
+      <%= fields_for :camper, @user.camper do |c| %>
+        <%= c.label :username, "Free Code Camp Username (optional)" %><br />
+         <%=c.select(:username, Camper.no_user.collect {|p| [ p.username, p.id ] } + ['Other'], {:include_blank => ''})%>
       <% end %>
     </div>
+
+
+      <div class="form-group">
+
+      </div>
 
     <div class="form-group field">
       <%= f.label :password %>

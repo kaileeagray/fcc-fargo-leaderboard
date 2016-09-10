@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root 'static_pages#leaderboard'
+  root 'campers#leaderboard'
 
   get '/about', to: 'static_pages#about'
 
